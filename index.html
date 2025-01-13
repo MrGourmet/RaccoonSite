@@ -77,22 +77,37 @@
         .hero button:hover {
             transform: scale(1.1);
         }
-        .service-card {
-            text-align: center;
-            padding: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .service-card img {
-            height: 60px;
-            margin-bottom: 10px;
-        }
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
+        /* Existing Styles */
+.services {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  width: 30%; /* Default width for larger screens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .service-cards {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center-align the cards */
+  }
+
+  .card {
+    width: 90%; /* Make cards wider for smaller screens */
+    margin-bottom: 20px; /* Add spacing between cards */
+  }
+}
         form {
             max-width: 600px;
             margin: 0 auto;
