@@ -46,38 +46,41 @@
             color: black;
             font-weight: bold;
         }
-        .hero {
-            text-align: center;
-            padding: 50px;
-            background-image: url('hero-background.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-        }
-        .hero h2 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-        .hero button {
-            padding: 15px 30px;
-            background-color: orange;
-            color: white;
-            border: none;
-            font-size: 2em;
-            cursor: pointer;
-            transition: transform 0.2s;
-            background-image: url('button-background.jpg'); /* Add your button background image here */
-            background-size: cover;
-            background-position: center;
-        }
-        .hero button:hover {
-            transform: scale(1.1);
-        }
-        /* Existing Styles */
+        /* Hero Section */
+.hero {
+  position: relative; /* To enable text overlay on the image */
+  width: 100%; /* Make the section full-width */
+  height: 400px; /* Adjust the height as needed */
+  overflow: hidden; /* Ensure the image doesn’t overflow */
+}
+
+.hero-image {
+  width: 100%; /* Make the image stretch across the full width */
+  height: 100%; /* Fill the section */
+  object-fit: cover; /* Ensures the image scales correctly without distortion */
+}
+
+.hero-text {
+  position: absolute; /* Position text over the image */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to exact center */
+  text-align: center; /* Center-align text */
+  color: white; /* Ensure text is visible on the image */
+  background: rgba(0, 0, 0, 0.5); /* Optional: Add semi-transparent background to text */
+  padding: 20px; /* Add some padding for readability */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.hero h1 {
+  font-size: 2.5em; /* Adjust the heading size */
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em; /* Adjust the paragraph size */
+}
+
 .services {
   padding: 40px 20px;
   text-align: center;
@@ -206,10 +209,13 @@
     </nav>
 
     <section class="hero">
-        <h2>Welcome to Raccoon Locksmith</h2>
-        <p>Your Trusted Locksmith in St.Petersburg</p>
-        <button>(813)358-6804</button>
-    </section>
+  <img src="hero-image.jpg" alt="Main Hero Image" class="hero-image">
+  <div class="hero-text">
+    <h1>Welcome to Your Business</h1>
+    <p>(813) 358-6804</p>
+  </div>
+</section>
+
 
     <section id="services" style="padding: 50px;">
         <h2 style="text-align: center;">Our Services</h2>
