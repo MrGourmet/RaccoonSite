@@ -111,6 +111,22 @@
     margin-bottom: 20px; /* Add spacing between cards */
   }
 }
+   .call-button {
+  display: inline-block;
+  background-color: #f1a400; /* Button color */
+  color: white; /* Text color */
+  padding: 15px 30px; /* Padding for the button */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.2em; /* Adjust font size */
+  font-weight: bold; /* Bold text */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.call-button:hover {
+  background-color: #d18b00; /* Darker shade on hover */
+}
         form {
             max-width: 600px;
             margin: 0 auto;
@@ -207,12 +223,14 @@
         <a href="#about">About Us</a>
         <a href="#contact">Contact</a>
     </nav>
+    <a href="tel:+1234567890" class="call-button">Call Us</a>
 
     <section class="hero">
   <img src="hero-image.jpg" alt="Main Hero Image" class="hero-image">
   <div class="hero-text">
-    <h1>Welcome to Your Business</h1>
+    <h1>Get Free Estimate</h1>
     <p>(813) 358-6804</p>
+    <a href="tel:+1234567890" class="call-button">Call Us Now</a>
   </div>
 </section>
 
