@@ -14,43 +14,43 @@
             line-height: 1.6;
         }
         header {
-            background-color: slategray;
-            padding: 20px;
-            text-align: center;
-            background-image: url('header-background.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header h1, header p {
-            margin: 0;
-            color: white;
-        }
-        header img {
-            height: 80px;
-            margin-bottom: 10px;
-        }
-        nav {
-            background-color: yelloworange;
-            padding: 10px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
+  position: sticky; /* Makes the header stick to the top when scrolling */
+  top: 0; /* Position it at the top of the viewport */
+  background-color: rgba(0, 0, 0, 0.8); /* Add a dark, semi-transparent background */
+  color: white; /* Ensure the text contrasts with the background */
+  padding: 10px 20px;
+  z-index: 1000; /* Keep it above other elements */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Add a slight shadow for depth */
+}
+
+header nav ul {
+  display: flex; /* Align the navigation items horizontally */
+  justify-content: flex-end; /* Push navigation items to the right */
+  list-style: none; /* Remove bullets */
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin-left: 20px; /* Add space between navigation items */
+}
+
+header nav ul li a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Ensure the links are visible on the dark background */
+  font-weight: bold; /* Make text bold */
+  transition: color 0.3s ease; /* Add smooth hover effect */
+}
+
+header nav ul li a:hover {
+  color: #f1a400; /* Change color on hover */
+}
+
         /* Hero Section */
 .hero {
   position: relative; /* To enable text overlay on the image */
   width: 100%; /* Make the section full-width */
-  height: 500px; /* Adjust the height as needed */
+  height: 400px; /* Adjust the height as needed */
   overflow: hidden; /* Ensure the image doesn’t overflow */
 }
 
@@ -68,7 +68,7 @@
   text-align: center; /* Center-align text */
   color: white; /* Ensure text is visible on the image */
   background: rgba(0, 0, 0, 0.5); /* Optional: Add semi-transparent background to text */
-  padding: 20px; /* Add some padding for readability */
+  padding: 25px; /* Add some padding for readability */
   border-radius: 10px; /* Optional: Add rounded corners */
 }
 
