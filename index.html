@@ -150,61 +150,59 @@
 
         /* About Section */
        #about {
-    padding: 80px 0;
+    padding: 100px 20px;
     color: #fff;
     text-align: center;
-    background-image: url('about-background.jpg');
+    background-image: url('about-modern-background.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-#about::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
-    z-index: -1; /* Put the overlay behind the text */
+#about h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #FFD700;
 }
 
-        #about h2 {
-            font-size: 3em;
-            color: #fff;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        #about p {
-            font-size: 1.2em;
-            color: #fff;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-            padding: 0 20px;
-        }
-        #about .highlight {
-            font-weight: bold;
-            color: #FFD700; /* Gold color */
-        }
-        /* Adding some button style inside About Us */
-        #about .cta-button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 30px;
-            background-color: #FFD700;
-            color: #333;
-            font-size: 1.1em;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        #about .cta-button:hover {
-            background-color: #f39c12;
-        }
+#about p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.8;
+    color: #f5f5f5;
+}
+
+#about .highlight {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+#about .cta-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 40px;
+    background-color: #FFD700;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#about .cta-button:hover {
+    background-color: #f39c12;
+    color: white;
+}
+
 
         /* Contact Section */
         #contact {
@@ -290,12 +288,23 @@
         </div>
     </section>
     <!-- Updated About Us Section -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>At <span class="highlight">Raccoon Locksmith</span>, we are more than just a locksmith company. We are your trusted partner in ensuring the safety and security of your loved ones, your property, and your business. Serving St.Petersburg for over a decade, our team of experienced professionals is dedicated to providing <span class="highlight">fast, reliable, and affordable</span> locksmith services.</p>
-        <p>Whether you're locked out of your home, car, or office, we are here to provide a swift solution. Our experts use the latest technology and techniques to ensure that your security needs are met with precision and care.</p>
-        <a href="#contact" class="cta-button">Contact Us Today</a>
-    </section>
+   <section id="about">
+    <h2>About Us</h2>
+    <p>
+        Welcome to <span class="highlight">Raccoon Locksmith</span>, your trusted security partner in St. Petersburg. 
+        For over a decade, we’ve been committed to safeguarding what matters most to you—your home, your car, and your business.
+    </p>
+    <p>
+        Our skilled professionals specialize in <span class="highlight">quick, reliable, and affordable</span> solutions, 
+        offering everything from emergency lockouts to advanced security installations. Using the latest technology, 
+        we ensure precision and care in every service we provide.
+    </p>
+    <p>
+        At Raccoon Locksmith, your safety is our top priority. Whether it’s day or night, our team is ready to deliver 
+        unmatched expertise and exceptional customer service.
+    </p>
+    <a href="#contact" class="cta-button">Get in Touch Today</a>
+</section>
 
    <section id="contact" style="padding: 50px;">
     <h2 style="text-align: center;">Contact Us</h2>
