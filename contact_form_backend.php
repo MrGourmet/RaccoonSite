@@ -1,30 +1,32 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Capture form data and sanitize it
-    $name = htmlspecialchars($_POST['name']);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $fullname = htmlspecialchars($_POST['fullname']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $location = htmlspecialchars($_POST['location']);
     $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
-    
-    // Check if any of the fields are empty
-    if (empty($name) || empty($email) || empty($message)) {
-        echo "All fields are required.";
-        exit;
-    }
 
-    // Set the email recipient (your email address)
+    // Recipient email address
     $to = "raccoonlocksmith@gmail.com";
-    $subject = "New Message from $name";
-    
-    // Construct the email body
-    $body = "Name: $name\nEmail: $email\nMessage:\n$message";
-    
+
+    // Subject
+    $subject = "New Contact Form Submission";
+
+    // Message body
+    $message = "You have received a new message from your website contact form:\n\n";
+    $message .= "Full Name: $fullname\n";
+    $message .= "Phone: $phone\n";
+    $message .= "Location: $location\n";
+    $message .= "Email: $email\n";
+
+    // Headers
+    $headers = "From: no-reply@yourdomain.com\r\n";
+    $headers .= "Reply-To: $email\r\n";
+
     // Send the email
-    $headers = "From: $email" . "\r\n" . "Reply-To: $email" . "\r\n" . "Content-Type: text/plain; charset=UTF-8";
-    
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Message sent successfully!";
+    if (mail($to, $subject, $message, $headers)) {
+        echo "<p>Thank you for contacting us, $fullname. We will get back to you soon!</p>";
     } else {
-        echo "Failed to send message.";
+        echo "<p>Sorry, there was an error sending your message. Please try again later.</p>";
     }
 }
 ?>
