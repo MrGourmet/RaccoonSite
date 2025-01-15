@@ -150,14 +150,20 @@
 
         /* About Section */
        #about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 80px 20px;
     background-color: #f8f9fa; /* Light background for contrast */
     color: #333; /* Darker text for better readability */
-    text-align: center;
     border-radius: 8px;
-    max-width: 800px;
-    margin: 0 auto; /* Center the section */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 100vh; /* Ensure it takes full viewport height */
+}
+
+#about .content {
+    max-width: 800px;
 }
 
 #about h2 {
@@ -194,7 +200,6 @@
 #about .cta-button:hover {
     background-color: #e5b800;
 }
-
 
 
         /* Contact Section */
