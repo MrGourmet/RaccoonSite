@@ -149,26 +149,30 @@
          }
 
         /* About Section */
-        #about {
-            padding: 50px 20px;
+       #about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('about-background.jpg');
             background-size: cover;
             color: white;
             text-align: center;
+            padding: 20px;
         }
         #about h2 {
-            font-size: 2.5em;
+            font-size: 3em;
             margin-bottom: 20px;
         }
         #about p {
             font-size: 1.2em;
             max-width: 800px;
-            margin: 0 auto 20px;
+            margin-bottom: 20px;
             line-height: 1.8;
         }
         #about .cta-button {
             display: inline-block;
-            margin-top: 20px;
             padding: 15px 30px;
             background-color: #f1a400;
             color: white;
