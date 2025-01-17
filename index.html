@@ -22,13 +22,27 @@
             padding: 40px 20px;
             text-align: center;
             position: relative;
+            display: flex;
+        align-items: center;
+        justify-content: space-between;
         }
-        header img {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            height: 100px;
-        }
+       header img {
+    height: 50px;
+    width: auto;
+    margin-right: auto; /* Align logo to the left */
+}
+        
+      @media (max-width: 768px) {
+    header img {
+        height: 40px; /* Adjust size for tablets and phones */
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        height: 30px; /* Further adjust size for smaller screens */
+    }
+}
         header h1 {
             margin: 0;
             font-size: 2.8em;
